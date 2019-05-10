@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+//Prime NG Modules
+import {ChipsModule} from 'primeng/chips';  
+import {SliderModule} from 'primeng/slider';
+
+
 import { ConceptsComponent } from './concepts/concepts.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
@@ -36,7 +41,9 @@ const APP_ROUTES: Routes = [
     RouterModule.forRoot(APP_ROUTES),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChipsModule,
+    SliderModule
   ],
   exports: [RouterModule],
   declarations: [

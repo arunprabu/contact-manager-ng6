@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +32,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
     FormsModule,
     ProductModule, // setting up routing module 
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]   // AppModule should in turn be bootstrapped with a comp -- AppComponent 

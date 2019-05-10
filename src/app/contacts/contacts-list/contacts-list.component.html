@@ -7,10 +7,7 @@
         </div>
       </section>
     </div>
-    <div class="alert alert-danger" *ngIf="contactList && contactList.length == 0">
-      No Contacts Found!. You can add one!
-    </div>
-    <div class="row" *ngIf="contactList">
+    <div class="row" *ngIf="contactList; else contactsNotFound">
       <div class="card col-sm-3" *ngFor="let contact of contactList">
         <div class="card-body">
           <h5 class="card-title">{{ contact.name }}</h5>
@@ -19,5 +16,12 @@
         </div>
       </div>
     </div>
+
+    <ng-template #contactsNotFound>
+      <div class="alert alert-danger">
+        No Contacts Found!. You can add one!
+      </div>
+    </ng-template>
+    
   
   </div>

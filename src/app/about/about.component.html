@@ -1,3 +1,10 @@
 <div class="container">
-  
+  <h2>Using PrimeNG</h2>
+
+  <h3 class="first">Basic</h3>
+  <p-chips [(ngModel)]="values1"></p-chips>
+
+  <h3>Range: {{rangeValues[0] + ' - ' + rangeValues[1]}}</h3>
+  <p-slider [(ngModel)]="rangeValues" [style]="{'width':'14em'}" [range]="true"></p-slider>
+
 </div>
