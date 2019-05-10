@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 
 import { IContact } from './IContact';
 
-
 //Decorator
 //injectable decorator make the class  dep injectable 
 @Injectable({
@@ -17,7 +16,7 @@ export class ContactService {
 
   constructor( private http: HttpClient) { }
 
-  //create contact 
+  //create contact
   createContact(contactData: IContact ): Observable<IContact> { // 1. get the data from comp.ts 
     console.log(contactData);
     //2. send data to rest api 

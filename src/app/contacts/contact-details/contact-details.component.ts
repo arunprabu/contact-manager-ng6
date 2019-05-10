@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ContactService } from 'src/app/contacts/contact.service';
 import { IContact } from '../IContact';
+import { ContactService } from '../contact.service';
 
 declare var $: any;
 

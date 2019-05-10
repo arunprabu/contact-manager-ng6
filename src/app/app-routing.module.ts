@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -19,9 +19,12 @@ const APP_ROUTES: Routes = [
   //syntax : path should have string and the component when that path is hit
   { path: '', redirectTo: 'concepts', pathMatch: 'full' },
   { path: 'concepts', component: ConceptsComponent },
-  { path: 'contacts', component: ContactsListComponent },
-  { path: 'contacts/new', component: AddContactComponent },
-  { path: 'contacts/:id', component: ContactDetailsComponent },
+  { path: 'contacts', children: [
+      { path: '', component: ContactsListComponent },
+      { path: 'new', component: AddContactComponent },
+      { path: ':id', component: ContactDetailsComponent },
+    ]
+  },
   { path: 'about', component: AboutComponent }
 ];
 

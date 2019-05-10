@@ -1,0 +1,100 @@
+TypeScript Repository 
+---
+https://github.com/arunprabu/typescript-in-2-days
+
+Angular 6 Project Repo
+--------
+https://github.com/arunprabu/phone-book-ng6
+
+Setting up Dev Environement 
+----------------
+Prerequisites: Node JS v 10 + should be installed. Active internet connection is required.
+npm i -g @angular/cli@6.2.9      -- will help us create Angular 6 project
+ng -v 
+
+For more details about CLI refer https://cli.angular.io/
+
+Creating Angular Project
+---------------------
+ng new phone-book-ng6         
+(npm install will happen automatically.. so, wait...)
+cd phone-book-ng6     
+ng serve  // will start the server 
+ng serve -o    // will open the browser automatically
+
+Ref: https://notepad.pw/Angular6April2019
+
+Components
+----------
+Refer your project for many types of components 
+ng generate component header  
+ng g c header (shorthand command)
+ng g c footer -it -is    (componenent with inline template and inline styles )
+ng g c nav -is           (componenent with inline style )
+ng g c header/search --flat -is -it  (componenent without folder. called as flat component. with -is -it also)
+--flat -> for folder less component -is -> for --inline-style -it -> for --inline-template
+
+The above types of components we have created in the project.
+
+Tryout transclusion with ng-content
+
+Data Binding
+==============
+  String Interpolation {}
+  Property Binding
+  Custom Property Binding
+  Event Binding
+  Two-way data Binding
+  Template Reference Variables 
+      <input #myName type="text"> <button (click)="setName(myName.value)">Set Name Pls</button>
+
+Directives
+================
+What are they? Directives are Instructions for the DOM.
+  1. Attribute Directives 
+      Examples: ngClass, ngSubmit, ngStyle 
+  2. Structural Directives 
+      Examples: ngIf, ngIf/else with ng-template, ngFor, ngSwitch 
+  
+  Custom Attribute Directive (Colorizer)
+  Custom Attribute Directive with event (EvtListener)
+
+
+Debugging
+===========
+  Use Chrome Inspector 
+    -- Goto source Tab locate webpack/projectfolder/ and open .ts for Sourcemaps
+    -- or press ctrl +p then specify the file you want to debug
+  Augury Extension to have a detailed representation of comp, modules, 
+
+Routes: 
+Basic Routes Setup Reference 
+https://github.com/arunprabu/phone-book-ng6/blob/master/Router-Instructions.txt
+
+Child Routes -- Ref 
+https://github.com/arunprabu/ng4-july18/blob/master/Router%20Instructions%20-%20More%20-%20Child%20Routes.txt
+https://github.com/arunprabu/ng4-july18/tree/master/my-child-routes
+
+Services
+  What are Services? 
+      Services are JavaScript functions that are responsible for doing a specific task. Services are injected using Dependency Injection.
+  Dependency Injection 
+      Dependency Injection is a design pattern that passes object as dependencies in different components across the application. Examples: renderer, elementRef
+
+RxJS and Observable
+----
+https://www.learnrxjs.io/          (nice documentation covers all API's/operators)
+What's Observable?
+    It's a collection that returned over time. 
+    It's a push, that sends multiple values
+    Observable is like restaurant kitchen.
+    If you subscribe to observable, it decides when to give information 
+Now, What's RxJs?
+    Various method of operators, you can chain on Observables to filter data, sort and do many things over the observable data
+Example on Observables and RxJS.
+    http://jsbin.com/kuzifehivi/4/edit?html,js,console
+  
+Deploying Angular App
+================
+take a build
+ng build --prod 
