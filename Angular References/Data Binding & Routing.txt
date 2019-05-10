@@ -92,6 +92,9 @@ Let's fix it.
 
 Creating Routing Module using CLI 
 ===
+PRo tip: When you create a  new project using CLI 
+try the following. 
+ng new my-app --routing 
 https://angular.io/tutorial/toh-pt5
 ng generate module app-routing --flat --module=app
 

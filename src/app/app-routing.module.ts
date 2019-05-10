@@ -13,6 +13,9 @@ import { SdComponent } from './concepts/sd/sd.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { DatabindingComponent } from './concepts/databinding/databinding.component';
+import { ProductListComponent } from './shopping/product-list/product-list.component';
+import { ProductDetailsComponent } from './shopping/product-details/product-details.component';
+import { CartComponent } from './shopping/cart/cart.component';
 
 
 const APP_ROUTES: Routes = [
@@ -25,7 +28,9 @@ const APP_ROUTES: Routes = [
       { path: ':id', component: ContactDetailsComponent },
     ]
   },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({
@@ -46,7 +51,9 @@ const APP_ROUTES: Routes = [
     DatabindingComponent,
     CpbComponent,
     CebComponent,
-    SdComponent
+    SdComponent,
+    ProductListComponent,
+    ProductDetailsComponent
   ]
 })
 export class AppRoutingModule { }

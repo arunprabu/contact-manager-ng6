@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { SearchComponent } from './shared/components/header/search.component';
 import { ColorizrDirective } from './concepts/colorizr.directive';
+import { CartComponent } from './shopping/cart/cart.component';
 
 //Decorator -- metadata 
 // helps the class as Depnedency Injectable
@@ -20,7 +21,8 @@ import { ColorizrDirective } from './concepts/colorizr.directive';
     FooterComponent,
     NavComponent,
     SearchComponent,
-    ColorizrDirective
+    ColorizrDirective,
+    CartComponent
   ],
   imports: [
     BrowserModule,
