@@ -23,53 +23,53 @@ export class Product implements IProduct{
   getProductList() {
     return [{
       "id": 1,
-      "name": "Skewers - Bamboo",
-      "category": "Automotive",
+      "name": "Apple",
+      "category": "Fruits",
       "price": "$2.76"
     }, {
       "id": 2,
-      "name": "Cheese - Parmigiano Reggiano",
-      "category": "Games",
+      "name": "Cheese",
+      "category": "Dairy",
       "price": "$6.38"
     }, {
       "id": 3,
-      "name": "Wine - Black Tower Qr",
-      "category": "Garden",
+      "name": "Orange",
+      "category": "Fruits",
       "price": "$4.85"
     }, {
       "id": 4,
-      "name": "Chicken - Thigh, Bone In",
-      "category": "Toys",
+      "name": "Tomato",
+      "category": "Vegetables",
       "price": "$5.01"
     }, {
       "id": 5,
-      "name": "Table Cloth 90x90 Colour",
-      "category": "Sports",
+      "name": "Table Cloth",
+      "category": "Kitchen Essentials",
       "price": "$6.13"
     }, {
       "id": 6,
       "name": "Cranberries - Frozen",
-      "category": "Baby",
+      "category": "Fruits",
       "price": "$7.08"
     }, {
       "id": 7,
-      "name": "Sambuca - Opal Nera",
-      "category": "Outdoors",
+      "name": "Angular 7 Book",
+      "category": "Books",
       "price": "$6.89"
     }, {
       "id": 8,
-      "name": "Wine - Bouchard La Vignee Pinot",
+      "name": "NFS - PS4 Game",
       "category": "Games",
       "price": "$9.48"
     }, {
       "id": 9,
-      "name": "Pepper - Red Chili",
-      "category": "Books",
+      "name": "Pepper",
+      "category": "Grocery",
       "price": "$5.51"
     }, {
       "id": 10,
-      "name": "Potatoes - Purple, Organic",
-      "category": "Computers",
+      "name": "Potatoes - Organic",
+      "category": "Vegetables",
       "price": "$9.63"
     }];
   }

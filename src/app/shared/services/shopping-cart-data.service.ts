@@ -13,8 +13,8 @@ export class ShoppingCartDataService {
   currentCartItem: any[] = [
     {
       "id": 2,
-      "name": "Cheese - Parmigiano Reggiano",
-      "category": "Games",
+      "name": "Cheese",
+      "category": "Dairy",
       "price": "$6.38"
     }
   ];

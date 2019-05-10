@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductModule } from './shopping/product.module';
 
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { SearchComponent } from './shared/components/header/search.component';
+
 import { ColorizrDirective } from './concepts/colorizr.directive';
-import { CartComponent } from './shopping/cart/cart.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 //Decorator -- metadata 
 // helps the class as Depnedency Injectable
@@ -22,12 +24,13 @@ import { CartComponent } from './shopping/cart/cart.component';
     NavComponent,
     SearchComponent,
     ColorizrDirective,
-    CartComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule // setting up routing module 
+    ProductModule, // setting up routing module 
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]   // AppModule should in turn be bootstrapped with a comp -- AppComponent 

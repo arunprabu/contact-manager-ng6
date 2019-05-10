@@ -20,6 +20,6 @@ export class HeaderComponent implements OnInit {
   }
 
   gotoCartPage(){
-    this.router.navigate(['cart']);
+    this.router.navigate(['products', 'cart']);
   }
 }
