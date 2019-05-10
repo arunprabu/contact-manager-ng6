@@ -1,0 +1,36 @@
+src/
+  app/
+    components/
+      shared/
+      concepts/
+      contacts/
+      about/
+    directives/
+    services/
+    guards/
+    pipes/
+    models/
+    interfaces/
+
+
+src/
+  app/  
+    shared/
+      header/
+      footer/
+      nav/
+    auth/
+      login/
+        login.comp.ts
+        login.comp.html
+        login.service.ts
+        login.directive.ts 
+      signup/
+      reset-pw/
+    dashboard/
+      ...
+      ...
+    reports/
+      ...
+      ...
+    

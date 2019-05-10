@@ -1,0 +1,73 @@
+Forms
+=====
+1. Template Driven 
+    HTML, 
+    Easy, 
+    Can't do complex validations 
+    Can't help you do unit testing 
+2. Reactive Forms 
+    HTML + TS 
+    little larger learning curve 
+    better for validations 
+    good for unit testing 
+
+Step1: 
+Create a FormGroup in ts 
+  contactForm: FormGroup;
+
+Step2: 
+inside ngOnInit...
+
+  this.contactForm = new FormGroup( { 
+    // we'll create new form controls 
+    name: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+  });
+
+Step3: 
+  connect the above with HTML form 
+
+  <form [formGroup]="contactForm" 
+
+  You will app show white screen. 
+
+Sidenote: 
+  If you use ReactiveFormsModule under imports block in app-routing.module.ts .. the error will go. 
+
+Step 4: 
+  connect the formfields with TS 
+  <input type="text" class="form-control" formControlName="name" placeholder="Enter Name" >
+
+Step5: 
+  setup Validations 
+
+  <input type="text" class="form-control" formControlName="name" placeholder="Enter Name"
+      [ngClass]="{ 'is-invalid': contactForm.get('name').touched && contactForm.get('name').invalid }" />
+  <div class="invalid-feedback">
+    <div>First Name is required</div>
+  </div>
+
+More Validations
+====
+    email: new FormControl('', [  
+      Validators.required,
+      Validators.email
+    ]),  
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6)
+    ]) 
+
+Step 6: 
+add form submission stuff 
+<form [formGroup]="contactForm" (ngSubmit)="onAddContactHandler()" 
+
+  
+Step 7: 
+in ts, define a method onAddContactHandler
+
+onAddContactHandler(): void{
+  console.log(this.contactForm);
+  console.log(this.contactForm.value);
+}

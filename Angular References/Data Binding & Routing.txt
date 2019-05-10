@@ -1,0 +1,104 @@
+Data Binding 
+======
+TS => HTML 
+
+1. String Interpolation  - {{ }}
+    TS => HTML 
+2. Property Binding  - []
+  TS => HTML 
+3. Event Binding  - ()
+  TS => HTML 
+4. Two Way Binding - [(ngModel)]  
+  TS <=> HTML 
+5. Custom Property Binding
+    -- helps us in Parent to Child comp Communication
+6. Custom Event Binding 
+     -- helps us in child to parent comp Communication
+
+Cross Component Communication
+--------------------
+1. Parent to Child 
+2. Child to Parent 
+3. Any comp to Any comp 
+
+
+SPA & Routing
+====
+creating components 
+
+ng g c concepts -is
+ng g c contacts -is 
+ng g c about -is  
+
+Step 1: Add the links and set up paths in nav.component.html
+`<ul class="nav navbar-nav">
+    <li class="active"><a href="/">Home</a></li>
+    <li ><a href="/concepts">Concepts</a></li>
+    <li ><a href="/contacts">Contacts</a></li>
+    <li ><a href="/about">About</a></li>
+</ul>
+
+Step 2: Let's have the routes configured in app.module.ts-- 
+import { Routes } from '@angular/router';
+
+const APP_ROUTES: Routes = [
+  //syntax : path should have string and the component when that path is hit
+  { path: '', component: ConceptsComponent },
+  { path: 'concepts', component: ConceptsComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'about', component: AboutComponent }
+]
+
+
+Step 3: In @NgModule decorator, add RouterModule.forRoot(APP_ROUTES) to register the routes
+`imports: [
+    BrowserModule,
+    RouterModule.forRoot(APP_ROUTES) // registering routes -- import RouterModule from '@angular/router'
+  ]`
+
+
+Step4: What should be replaced? Add router outlet in layout file app.comp.html
+<div style="text-align:center; margin-top:80px;">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+Step 5:
+Check the app. The routes should work. But the page will reload. Let's fix it.
+in nav.comp.html 
+replace href with routerLink 
+<ul class="nav navbar-nav">
+    <li class="active"><a routerLink="/">Home</a></li>
+    <li ><a routerLink="/concepts">Concepts</a></li>
+    <li ><a routerLink="/contacts">Contacts</a></li>
+    <li ><a routerLink="/about">About</a></li>
+</ul>
+
+Step6:
+Check the app. page should not reload.
+let's have active class. have routerLinkActive in li.
+<li routerLinkActive="active">
+
+Step7: Now, when you see the navigation menu, active class will be added in another link also. 
+Let's fix it.
+
+<ul class="nav navbar-nav">
+    <li routerLinkActive="active" 
+      [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
+    <li routerLinkActive="active"><a routerLink="/concepts">Concepts</a></li>
+</ul>
+
+Creating Routing Module using CLI 
+===
+https://angular.io/tutorial/toh-pt5
+ng generate module app-routing --flat --module=app
+
+Learn about Path match here 
+https://stackoverflow.com/questions/42992212/in-angular-what-is-pathmatch-full-and-what-effect-does-it-have/42992231
+
+
+Creating Feature Module 
+======================
+ng g m modules/contacts

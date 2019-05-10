@@ -1,0 +1,31 @@
+<h3>String Interpolation</h3>
+<p>{{ appName }}</p>
+<p>{{ isLoggedIn }}</p>
+<p>{{ skillsList[0] }}</p>
+<p>{{ getMyExp() }}</p>
+<p title="{{ appName }}"> The app i build is... -- mouseover to see tooltip</p>
+<input type="text" value="{{appName}}">
+<hr>
+
+<h3>Property Binding</h3>
+<input type="text" [value]="appName">
+<p class="red">this will appear in red</p>
+<p [class]="red">it wont as there is no  var defined as red</p>
+<p [ngClass]="{ 'red': true }"> check whether it works? </p>
+<p [ngClass]="{ 'red': !isAuthenticated() }"> Not logged in yet </p>
+<p [ngClass]="{ 'red': !isAuthenticated(), 'bold': true }"> Will appear in bold text </p>
+
+<p>Todo: try [ngStyle]</p>
+
+<hr>
+<h3>Event Binding</h3>
+<button onclick="onBtnClickHandler()">Click me -- this will not work -- refer console</button>
+
+<br><br>
+<button (click)="onBtnClickHandler()">Click me -- will work</button>
+
+<hr>
+<h3> Two way binding </h3>
+<input type="text" [(ngModel)]="company">
+<br>
+<p>{{ company }}</p>

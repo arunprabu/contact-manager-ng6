@@ -1,0 +1,20 @@
+Services 
+=====
+
+building block that helps component connect with rest api 
+ng g s components/contacts/contact 
+
+
+RxJS and Observable
+----
+https://www.learnrxjs.io/          (nice documentation covers all API's/operators)
+What's Observable?
+    It's a collection that returned over time. 
+    It's a push, that sends multiple values
+    Observable is like restaurant kitchen.
+    If you subscribe to observable, it decides when to give information 
+Now, What's RxJs?
+    Various method of operators, you can chain on Observables to filter data, sort and do many things over the observable data
+Example on Observables and RxJS.
+    http://jsbin.com/kuzifehivi/4/edit?html,js,console
+    

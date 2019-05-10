@@ -1,0 +1,54 @@
+Typescript
+----------
+JavaScript + Data typing  + OOPS = Typescript 
+Optionally typed lang 
+Compiled to Javascript language 
+Typescript compiler  => Transpiler - typescript 
+
+JS 
+---
+var x = 10;
+
+TS 
+---
+var x: number = 10; //explicit 
+var y = 20; // implicit  
+
+var myName:string = "Arun";
+var isLoggedIn: boolean = true;
+var skillList: Array<string> = [
+];
+//another way
+var skillList1: string[] = [
+];
+var myProfile: { } = {
+}
+var everything: any = "Arun";
+everything = 235356; 
+
+class Car extends Vehicle{
+    constructor()  {   
+    }
+    drive() {
+    }
+    reverse() {
+    }
+    static park(){
+
+    }
+}
+
+var car = new Car()
+car.drive();
+
+
+Try typescript playground 
+---
+http://www.typescriptlang.org/play/index.html
+
+Typescript Resources 
+----
+https://github.com/arunprabu/typescript-in-2-days
+
+
+

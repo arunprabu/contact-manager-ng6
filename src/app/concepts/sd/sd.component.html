@@ -1,0 +1,30 @@
+<div>
+  <h2>*ngIf</h2>
+
+  <div *ngIf="isLoggedIn">
+    Thanks for logging in
+  </div>
+
+  <div *ngIf="!isLoggedIn">
+    You are not authenticated. pls login
+  </div>
+
+
+  <h2>*ngFor</h2>
+  <ul>
+    <li *ngFor="let skill of skillsList">{{ skill }}</li>
+  </ul>
+
+
+  <h2>ngSwitch</h2>
+  <p>Todo: ngSwitch </p>
+
+  <hr>
+  <h2>Custom Attribute Direcrtives</h2>
+
+  <div appColorizr>
+    testing the div with colorizer directive
+  </div>
+
+
+</div>
