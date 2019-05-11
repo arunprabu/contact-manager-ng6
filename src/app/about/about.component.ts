@@ -17,6 +17,9 @@ export class AboutComponent implements OnInit {
   dangerousUrl: string; 
   trustedUrl: any;
 
+  birthday = new Date(1988, 3, 15); // April 15, 1988
+  loremIpsum: string ="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam harum facere omnis aspernatur recusandae nam consectetur laboriosam ab non expedita cum saepe obcaecati, officia laborum iusto facilis ullam fugit eaque!"
+
   constructor(private sanitizer: DomSanitizer) { 
     this.dangerousUrl = 'javascript:alert("Hi there")';
     this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);

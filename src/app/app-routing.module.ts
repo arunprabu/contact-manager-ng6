@@ -19,6 +19,7 @@ import { CpbComponent } from './concepts/cpb/cpb.component';
 import { DatabindingComponent } from './concepts/databinding/databinding.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { AuthGuard } from './shared/guards/auth.guard';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 const APP_ROUTES: Routes = [
   //syntax : path should have string and the component when that path is hit
@@ -54,7 +55,8 @@ const APP_ROUTES: Routes = [
     DatabindingComponent,
     CpbComponent,
     CebComponent,
-    SdComponent
+    SdComponent,
+    EllipsisPipe
   ]
 })
 export class AppRoutingModule { }

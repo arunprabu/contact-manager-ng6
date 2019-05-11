@@ -10,6 +10,19 @@
   <br>
   <button (click)="onBtnClickHandler()">Send Data</button>
 
+  <hr>
+  <h3>Pipes</h3>
+  <p>{{birthday}}</p>
+  <p>{{birthday | date }}</p>
+  <p>{{birthday | date: 'dd/MMMM/yyyy hh:mm:ss a' }}</p>
+
+  <p>{{ loremIpsum  }}</p>
+  <p>{{ loremIpsum | uppercase }}</p>
+  
+  <p>{{ loremIpsum | ellipsis: '60' }}</p>
+  <p>{{ loremIpsum | ellipsis: '240' }}</p>
+
+
 
   <h4>An untrusted URL:</h4>
   <p><a class="e2e-dangerous-url" [href]="dangerousUrl">Click me</a></p>
