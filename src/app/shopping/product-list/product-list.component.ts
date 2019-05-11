@@ -10,13 +10,14 @@ import { ShoppingCartDataService } from 'src/app/shared/services/shopping-cart-d
 export class ProductListComponent implements OnInit {
 
   productList: any[];
+
   constructor( private product: Product, private shoppingCartDataService: ShoppingCartDataService) { }
 
   ngOnInit() {
     this.productList = this.product.getProductList();
     console.log(this.productList);
   }
-
+  
   addToCartHandler(pdt){
     this.shoppingCartDataService.updateCart(pdt);
   }

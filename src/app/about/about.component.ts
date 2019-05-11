@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
 
-  values1: string[];
+  chipsList: string[];
 
   rangeValues: number[] = [20,80];
 
@@ -24,6 +24,11 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onBtnClickHandler(){
+    console.log(this.chipsList);
+    console.log(this.rangeValues);
   }
 
 }

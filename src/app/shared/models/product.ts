@@ -10,6 +10,7 @@ export interface IProduct{
 @Injectable({
   providedIn: 'root'
 })
+
 export class Product implements IProduct{
   id: number;
   name: string;    
@@ -17,7 +18,6 @@ export class Product implements IProduct{
   price: string;
 
   constructor(){
-
   }
 
   getProductList() {

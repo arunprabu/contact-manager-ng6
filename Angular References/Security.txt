@@ -1,0 +1,18 @@
+Security
+=======
+How angular protects XSS?
+https://hackernoon.com/how-angular-protects-us-from-xss-attacks-3cb7a7d49d95
+
+Angular – How to Prevent XSS Attacks – Code Examples
+https://vitalflux.com/angular-prevent-xss-attacks-code-examples/
+
+Angular recommendations to prevent Server XSS Attacks
+======================
+As part of server-side processing, escape all data before sending them as Http response. That would mean that if response data consisted of HTML/Javascript tags, they will get escaped.
+Avoid generating Angular templates as part of server-side processing. This may lead to template injection thereby resulting in DOM manipulation when the page loads in the browser.
+
+Angular recommendations to prevent Client XSS Attacks
+=========================
+Read here: https://vitalflux.com/angular-prevent-xss-attacks-code-examples/
+
+https://vitalflux.com/angular-top-10-security-best-practices-vis-vis-security-risks/

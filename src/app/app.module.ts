@@ -30,8 +30,8 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
   imports: [
     BrowserModule,
     FormsModule,
-    ProductModule, // setting up routing module 
-    AppRoutingModule,
+    ProductModule, // setting up product module first --so that child routing of products will work
+    AppRoutingModule, //and then adding main app-routing module -- otherwise 404 will come
     BrowserAnimationsModule
   ],
   providers: [],

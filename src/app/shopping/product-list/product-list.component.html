@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of productList">
+    <div class="row" *ngIf="productList">
+      <div class="col-12 col-md-6 col-lg-4"  *ngFor="let product of productList">
         <div class="card">
           <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
           <div class="card-body">
@@ -12,7 +12,8 @@
                 <p class="btn btn-danger btn-block">{{product.price}}</p>
               </div>
               <div class="col">
-                <a class="btn btn-success btn-block" (click)="addToCartHandler(product)">Add to cart</a>
+                <a class="btn btn-success btn-block" 
+                (click)="addToCartHandler(product)">Add to cart</a>
               </div>
             </div>
           </div>

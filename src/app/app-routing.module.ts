@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {ChipsModule} from 'primeng/chips';  
 import {SliderModule} from 'primeng/slider';
 
-
 import { ConceptsComponent } from './concepts/concepts.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
@@ -19,7 +18,7 @@ import { CebComponent } from './concepts/ceb/ceb.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { DatabindingComponent } from './concepts/databinding/databinding.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
-
+import { AuthGuard } from './shared/guards/auth.guard';
 
 const APP_ROUTES: Routes = [
   //syntax : path should have string and the component when that path is hit
@@ -27,7 +26,7 @@ const APP_ROUTES: Routes = [
   { path: 'concepts', component: ConceptsComponent },
   { path: 'contacts', children: [
       { path: '', component: ContactsListComponent },
-      { path: 'new', component: AddContactComponent },
+      { path: 'new', component: AddContactComponent, canActivate: [AuthGuard]  },
       { path: ':id', component: ContactDetailsComponent },
     ]
   },
