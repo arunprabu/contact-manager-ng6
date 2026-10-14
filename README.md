@@ -1,27 +1,21 @@
-# ContactManagerNg6
+# Contact manager NG6
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+> Status: Drafted. Source claims were checked by the author. Independent review is outstanding.
 
-## Development server
+This Angular 6 browser application is wired by the [Angular CLI project configuration](angular.json). It combines a contact client, a shopping example with an in-memory cart, and Angular concept demonstrations.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup
 
-## Code scaffolding
+The project requires Node.js and npm, but the repository does not specify supported versions. See the [developer setup and testing guide](docs/development/setup-and-testing.md) for commands and their verification status.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Documentation
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Repository overview](docs/architecture/repository-overview.md)
+- [Data model](docs/data-model/data-model.md)
+- [API reference](docs/api/api-reference.md)
+- [Integrations](docs/integrations/integrations.md)
+- [Developer setup and testing](docs/development/setup-and-testing.md)
+- [Deployment boundary](docs/operations/deployment.md)
+- [React migration spec requirements](docs/spec-requirements.md)
+- [App shell and navigation specification](specs/001-app-shell-navigation/spec.md)
+- [Documentation review](docs/reviews/documentation-review.md)
